@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暑い寒いアンケート</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+        }
+        p {
+            color: #666666;
+        }
+        .button-group {
+            margin: 20px 0;
+        }
+        .button-group button {
+            background-color: #74ebd5;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button-group button:hover {
+            background-color: #ACB6E5;
+        }
+        .button-group button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>温度アンケート</h1>
+        <p>今日の教室の温度はどう感じますか？</p>
+        <div class="button-group">
+            <button onclick="alert('暑いと感じます')">暑い</button>
+            <button onclick="alert('寒いと感じます')">寒い</button>
+            <button onclick="alert('ちょうどいいと感じます')">ちょうどいい</button>
+        </div>
+    </div>
+</body>
+</html>
