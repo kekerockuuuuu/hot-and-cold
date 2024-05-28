@@ -46,6 +46,9 @@
         .button-group button:active {
             transform: scale(0.98);
         }
+        .results {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -53,10 +56,34 @@
         <h1>温度アンケート</h1>
         <p>今日の教室の温度はどう感じますか？</p>
         <div class="button-group">
-            <button onclick="alert('暑いと感じます')">暑い</button>
-            <button onclick="alert('寒いと感じます')">寒い</button>
-            <button onclick="alert('ちょうどいいと感じます')">ちょうどいい</button>
+            <button onclick="submitSurvey('hot')">暑い</button>
+            <button onclick="submitSurvey('cold')">寒い</button>
+            <button onclick="submitSurvey('comfortable')">ちょうどいい</button>
+        </div>
+        <div class="results">
+            <p>結果:</p>
+            <p>暑い: <span id="hotCount">0</span></p>
+            <p>寒い: <span id="coldCount">0</span></p>
+            <p>ちょうどいい: <span id="comfortableCount">0</span></p>
         </div>
     </div>
+    <script>
+        let hotCount = 0;
+        let coldCount = 0;
+        let comfortableCount = 0;
+
+        function submitSurvey(selection) {
+            if (selection === 'hot') {
+                hotCount++;
+                document.getElementById('hotCount').innerText = hotCount;
+            } else if (selection === 'cold') {
+                coldCount++;
+                document.getElementById('coldCount').innerText = coldCount;
+            } else if (selection === 'comfortable') {
+                comfortableCount++;
+                document.getElementById('comfortableCount').innerText = comfortableCount;
+            }
+        }
+    </script>
 </body>
 </html>
