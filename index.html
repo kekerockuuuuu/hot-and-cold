@@ -1,89 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>暑い寒いアンケート</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #74ebd5, #ACB6E5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #333333;
-        }
-        p {
-            color: #666666;
-        }
-        .button-group {
-            margin: 20px 0;
-        }
-        .button-group button {
-            background-color: #74ebd5;
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button-group button:hover {
-            background-color: #ACB6E5;
-        }
-        .button-group button:active {
-            transform: scale(0.98);
-        }
-        .results {
-            margin-top: 20px;
-        }
-    </style>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>温度アンケート</h1>
-        <p>今日の教室の温度はどう感じますか？</p>
-        <div class="button-group">
-            <button onclick="submitSurvey('hot')">暑い</button>
-            <button onclick="submitSurvey('cold')">寒い</button>
-            <button onclick="submitSurvey('comfortable')">ちょうどいい</button>
-        </div>
-        <div class="results">
-            <p>結果:</p>
-            <p>暑い: <span id="hotCount">0</span></p>
-            <p>寒い: <span id="coldCount">0</span></p>
-            <p>ちょうどいい: <span id="comfortableCount">0</span></p>
-        </div>
-    </div>
-    <script>
-        let hotCount = 0;
-        let coldCount = 0;
-        let comfortableCount = 0;
 
-        function submitSurvey(selection) {
-            if (selection === 'hot') {
-                hotCount++;
-                document.getElementById('hotCount').innerText = hotCount;
-            } else if (selection === 'cold') {
-                coldCount++;
-                document.getElementById('coldCount').innerText = coldCount;
-            } else if (selection === 'comfortable') {
-                comfortableCount++;
-                document.getElementById('comfortableCount').innerText = comfortableCount;
-            }
-        }
-    </script>
+<h1>My Website</h1>
+<p>A website created by me.</p>
+
 </body>
 </html>
